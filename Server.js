@@ -23,7 +23,9 @@ var http_server = http.createServer(app);
 // Now create socket io object.
 var io = require('socket.io').listen(http_server);
 https_server.listen(HTTPS_PORT);
-http_server.listen(10001);
+http_server.listen(10001, server_ip_address, function(){
+	console.log("app listening on: " + HTTPS_PORT);
+});
 io.on('connection', function(socket){
   socket.on('join', function(room){
     var clients = io.sockets.adapter.rooms[room];
