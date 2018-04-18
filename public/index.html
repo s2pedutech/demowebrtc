@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+</head> 
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+   
+    <div>
+  <video id="localVideo" height="250" width="250" autoplay playsinline></video>
+  <video id="remoteVideo" height="250" width="250" autoplay></video> 
+    </div>
+  <div>
+    <button id="get-video">Get Video</button>
+    <button id="call" disabled="disabled">Call</button>
+      <button id="endcall" disabled="disabled">EndCall</button>
+  </div>
+  <form id="fileInfo">
+        <input type="file" id="fileInput" name="files"/>
+        <input type="button" id="sendFileButton"  value="Send" />
+        <br>
+        <br>    
+  </form>
+  <a id="download"></a>
+  <script src="/app/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="/app/app.js"></script>
+  <script>
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+      console.log("Supports file api");
+    } else {
+       console.log("Does not support file api");
+    }
+  </script>
+</body>  
+</html>

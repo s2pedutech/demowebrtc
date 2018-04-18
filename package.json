@@ -1,0 +1,25 @@
+{
+  "name": "piramaltelemedpoc",
+  "version": "1.0.0",
+  "description": "Webrtc demo",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gandharpatwardhan@bitbucket.org/gaussriemannscientific/piramaltelemedpoc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/gaussriemannscientific/piramaltelemedpoc#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-force-ssl": "^0.3.2",
+    "socket-io": "^1.0.0",
+    "socket.io": "^2.1.0",
+    "webrtc-adapter": "^6.1.5",
+    "wrtc-ice-cand-parse": "0.0.11"
+  }
+}

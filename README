@@ -1,0 +1,8 @@
+#generate ssl certificate for https access.
+$openssl req -new -newkey rsa:2048 -nodes -out chatVideo.csr -keyout private.key
+#generate self signed certificate from private key and csr file.
+$openssl x509 -signkey private.key -in chatVideo.csr -req -days 365 -out domain.crt
+
+Usefull Links:
+https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs
+https://medium.com/@nileshsingh/everything-about-creating-an-https-server-using-node-js-2fc5c48a8d4e
